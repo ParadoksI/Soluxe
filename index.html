@@ -14,6 +14,14 @@
             type="text/css"
             href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
         />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+            rel="stylesheet"
+        />
+
         <!-- reser -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <!-- шрифты -->
@@ -22,6 +30,7 @@
         <link rel="stylesheet" href="./assets/css/style.css" />
         <!-- компоненты -->
         <link rel="stylesheet" href="./assets/css/components/header.css" />
+        <link rel="stylesheet" href="./assets/css/components/footer.css" />
 
         <link rel="icon" type="image/svg" href="/favicon.svg" />
         <title>Soluxe</title>
@@ -39,12 +48,8 @@
             </div>
             <header id="header" class="header closed">
                 <div class="header__container">
-                    <img
-                        class="header__logo"
-                        src="./public/img/Logo.svg"
-                        alt="Soluxe"
-                    />
-                    <ul class="header__list">
+                    <img class="header__logo" src="./logo.svg" alt="Soluxe" />
+                    <ul class="header__list" id="nav">
                         <li>
                             <a
                                 href="#Title"
@@ -74,7 +79,7 @@
                                 href="#Price"
                                 class="header__item"
                                 data-section="Price"
-                                >Прайс-лист</a
+                                >Полный список услуг</a
                             >
                         </li>
                         <li>
@@ -101,29 +106,38 @@
                                 >Контакты</a
                             >
                         </li>
+                        <div class="header__contact header__mobile-item">
+                            <img src="./public/icons/geo.svg" alt="Location" />
+                            <a href="">
+                                <p>г. Уфа, ул. Менделеева 132, студия 74</p>
+                            </a>
+                        </div>
+                        <div class="header__footer header__mobile-item">
+                            <a href="https://t.me/soluxespa"
+                                ><img
+                                    src="./public/icons/tg-head.svg"
+                                    alt="Telegramm"
+                            /></a>
+
+                            <a href="https://wa.me/79991326888"
+                                ><img
+                                    src="./public/icons/whats-head.svg"
+                                    alt="Whatsaapp"
+                            /></a>
+                        </div>
                     </ul>
-                    <div class="header__contact">
-                        <img src="./public/icons/geo.svg" alt="Location" />
-                        <p>Москва, ул. Фадеева, д. Каруселина</p>
-                    </div>
-                    <div class="header__footer">
-                        <a href=""
-                            ><img src="./public/icons/vk-mod.svg" alt="VK"
-                        /></a>
-                        <a href=""
+
+                    <div class="header__footer header__pc-item">
+                        <a href="https://t.me/soluxespa"
                             ><img
-                                src="./public/icons/telegram.svg"
+                                src="./public/icons/tg-head.svg"
                                 alt="Telegramm"
                         /></a>
-                        <a href=""
+
+                        <a href="https://wa.me/79991326888"
                             ><img
-                                src="./public/icons/instagram.svg"
-                                alt="Instagram"
-                        /></a>
-                        <a href=""
-                            ><img
-                                src="./public/icons/youtube.svg"
-                                alt="Youtube"
+                                src="./public/icons/whats-head.svg"
+                                alt="Whatsaapp"
                         /></a>
                     </div>
                 </div>
@@ -135,21 +149,20 @@
                     <div class="container welcome__container">
                         <div class="welcome__text">
                             <div class="welcome__title-wrapper">
+                                <div class="welcome__logo">
+                                    <img src="./logo.svg" alt="Soluxe spa" />
+                                </div>
                                 <h1 class="welcome__title">
-                                    Soluxe Asian – искусство азиатского спа
+                                    гармония по твоим правилам
                                 </h1>
                                 <div class="title-mask"></div>
                             </div>
-                            <p class="welcome__disc">
-                                Погрузитесь в атмосферу безмятежности, где
-                                традиции <span>Востока</span> сочетаются с
-                                современной <span>роскошью</span>
-                            </p>
                         </div>
-                        <div class="welcome__button">
-                            <button>Записаться на приём</button>
-                            <button>Позвонить</button>
-                        </div>
+
+                        <!-- <div class="welcome__button">
+                            <a target="_blank" href="https://n1363084.yclients.com"><button>Записаться на приём</button></a>
+                            <a href="tel:+89991326888"><button>Позвонить</button></a>
+                        </div> -->
                     </div>
                 </section>
                 <section id="Service" class="section services">
@@ -157,836 +170,947 @@
                         <h2 class="all__title-alt">Наши услуги</h2>
                         <div class="services__title">
                             <h5>
-                                Спа Концепция
+                                Спа Концепция <br />
                                 <span>"Гармония по вашим правилам"</span>
+                                <br />
+                                <p>
+                                    вы выбираете время и все услуги студии становятся доступны только вам.
+                                    <br>
+                                    Все включено, всё под ваши предпочтения.
+                                </p>
                             </h5>
-                            <p>Вы можете выбрать один из двух вариантов:</p>
+
+                            <div class="service__item-content-title">
+                                <p>Программа:</p>
+                            </div>
+                            <div class="service__item-content-point">
+                                <div class="dot"></div>
+                                <p class="service__item-content-point-info">
+                                    Массажи
+                                </p>
+                            </div>
+                            <div class="service__item-content-point">
+                                <div class="dot"></div>
+                                <p class="service__item-content-point-info">
+                                    Кедровая бочка
+                                </p>
+                            </div>
+
+                            <div class="service__item-content-point">
+                                <div class="dot"></div>
+                                <p class="service__item-content-point-info">
+                                    Спа-косметологические услуги
+                                </p>
+                            </div>
+                            <div class="service__item-content-point">
+                                <div class="dot"></div>
+                                <p class="service__item-content-point-info">
+                                    Уход за телом
+                                </p>
+                            </div>
+                            <div class="service__item-content-point">
+                                <div class="dot"></div>
+                                <p class="service__item-content-point-info">
+                                    Горячие и освежающие напитки
+                                </p>
+                            </div>
+                            <div class="service__item-content-point">
+                                <div class="dot"></div>
+                                <p class="service__item-content-point-info">
+                                    Чайная церемония
+                                </p>
+                            </div>
+                            <p class="service__item-point-undertext">
+                                Вы можете выбрать определённое время и
+                                пользоваться всеми нашими услугами
+                            </p>
                         </div>
                         <div class="service__point service__ready">
-                            <div class="service__point-title">
-                                <span>1. Готовые All Inclusive Пакеты</span> -
-                                для тех, кто хочет довериться профессионалу
+                            <div>
+                                <div class="service__ready-list">
+                                    <div class="service__item">
+                                        <div class="service__item-img">
+                                            <img
+                                                src="./public/img/RELAX.jpg"
+                                                alt="Наши цены"
+                                            />
+                                            <div
+                                                class="service__item-subimg sub-img-3"
+                                            >
+                                                <img
+                                                    src="./public/icons/lotus-3.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <h5>Soluxe Relax</h5>
+                                        <div class="service__item-content">
+                                            <div
+                                                class="service__item-content-point"
+                                            >
+                                                <img
+                                                    src="./public/icons/Time.svg"
+                                                    alt="Время процедуры"
+                                                />
+                                                <p>
+                                                    Время: <span>90 минут</span>
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="service__item-content-point service__item-content-point-price"
+                                            >
+                                                <img
+                                                    src="./public/icons/Wallet.svg"
+                                                    alt="Цена процедуры"
+                                                />
+                                                <p>
+                                                    Цена:
+                                                    <span>15000 &#8381;</span>
+                                                </p>
+                                            </div>
+                                            <div class="service__item-switch">
+                                                <span class="service__spans"
+                                                    >2 человека</span
+                                                >
+                                                <label>
+                                                    <input
+                                                        id="servCheck"
+                                                        type="checkbox"
+                                                    />
+                                                    <span
+                                                        class="toggle_background"
+                                                    >
+                                                        <div
+                                                            class="circle-icon"
+                                                        ></div>
+                                                        <div
+                                                            class="circle-icon circle-icon-mod"
+                                                        ></div>
+                                                        <div
+                                                            class="vertical_line"
+                                                        ></div>
+                                                    </span>
+                                                </label>
+                                                <span class="service__spans"
+                                                    >1 человек * <span class="service__spans-undertext">*массаж в четыре руки</span></span
+                                                >
+                                            </div>
+
+                                            <div
+                                                class="service__item-content-disc"
+                                            >
+                                                <p>
+                                                    Вы можете просмотреть полный
+                                                    список услуг здесь
+                                                </p>
+                                                <a href="#Price">
+                                                    <button
+                                                        id="toggleService"
+                                                        class="service__item-button"
+                                                    >
+                                                        <img
+                                                            src="./public/icons/Full.svg"
+                                                            alt=""
+                                                        />
+                                                        Полный список услуг
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a
+                                            class="service__blank-link"
+                                            target="_blank"
+                                            href="https://n1363084.yclients.com"
+                                        >
+                                            <button
+                                                class="service__item-footer"
+                                            >
+                                                Записаться
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="service__item">
+                                        <div class="service__item-img">
+                                            <img
+                                                src="./public/img/HARMONY.jpg"
+                                                alt="Наши цены"
+                                            />
+                                            <div
+                                                class="service__item-subimg sub-img-2"
+                                            >
+                                                <img
+                                                    src="./public/icons/lotus-2.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <h5>Soluxe Harmony</h5>
+                                        <div class="service__item-content">
+                                            <div
+                                                class="service__item-content-point"
+                                            >
+                                                <img
+                                                    src="./public/icons/Time.svg"
+                                                    alt="Время процедуры"
+                                                />
+                                                <p>
+                                                    Время:
+                                                    <span>120 минут</span>
+                                                </p>
+                                            </div>
+
+                                            <div
+                                                class="service__item-content-point service__item-content-point-price"
+                                            >
+                                                <img
+                                                    src="./public/icons/Wallet.svg"
+                                                    alt="Цена процедуры"
+                                                />
+                                                <p>
+                                                    Цена:
+                                                    <span>19000 &#8381;</span>
+                                                </p>
+                                            </div>
+                                            <div class="service__item-switch">
+                                                <span class="service__spans"
+                                                    >2 человека</span
+                                                >
+                                                <label>
+                                                    <input
+                                                        id="servCheck"
+                                                        type="checkbox"
+                                                    />
+                                                    <span
+                                                        class="toggle_background"
+                                                    >
+                                                        <div
+                                                            class="circle-icon"
+                                                        ></div>
+                                                        <div
+                                                            class="circle-icon circle-icon-mod"
+                                                        ></div>
+                                                        <div
+                                                            class="vertical_line"
+                                                        ></div>
+                                                    </span>
+                                                </label>
+                                                <span class="service__spans"
+                                                    >1 человек * <span class="service__spans-undertext">*массаж в четыре руки</span></span
+                                                >
+                                            </div>
+
+                                            <div
+                                                class="service__item-content-disc"
+                                            >
+                                                <p>
+                                                    Вы можете просмотреть полный
+                                                    список услуг здесь
+                                                </p>
+                                                <a href="#Price">
+                                                    <button
+                                                        id="toggleService"
+                                                        class="service__item-button"
+                                                    >
+                                                        <img
+                                                            src="./public/icons/Full.svg"
+                                                            alt=""
+                                                        />
+                                                        Полный список услуг
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a
+                                            class="service__blank-link"
+                                            target="_blank"
+                                            href="https://n1363084.yclients.com"
+                                        >
+                                            <button
+                                                class="service__item-footer"
+                                            >
+                                                Записаться
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="service__item">
+                                        <div class="service__item-img">
+                                            <img
+                                                src="./public/img/PREMIUM.jpg"
+                                                alt="Наши цены"
+                                            />
+                                            <div
+                                                class="service__item-subimg sub-img-1"
+                                            >
+                                                <img
+                                                    src="./public/icons/lotus-1.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <h5>Soluxe Premium</h5>
+                                        <div class="service__item-content">
+                                            <div
+                                                class="service__item-content-point"
+                                            >
+                                                <img
+                                                    src="./public/icons/Time.svg"
+                                                    alt="Время процедуры"
+                                                />
+                                                <p>
+                                                    Время:
+                                                    <span>150 минут</span>
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="service__item-content-point service__item-content-point-price"
+                                            >
+                                                <img
+                                                    src="./public/icons/Wallet.svg"
+                                                    alt="Цена процедуры"
+                                                />
+                                                <p>
+                                                    Цена:
+                                                    <span>23000 &#8381;</span>
+                                                </p>
+                                            </div>
+                                            <div class="service__item-switch">
+                                                <span class="service__spans"
+                                                    >2 человека</span
+                                                >
+                                                <label>
+                                                    <input
+                                                        id="servCheck"
+                                                        type="checkbox"
+                                                    />
+                                                    <span
+                                                        class="toggle_background"
+                                                    >
+                                                        <div
+                                                            class="circle-icon"
+                                                        ></div>
+                                                        <div
+                                                            class="circle-icon circle-icon-mod"
+                                                        ></div>
+                                                        <div
+                                                            class="vertical_line"
+                                                        ></div>
+                                                    </span>
+                                                </label>
+                                                <span class="service__spans"
+                                                    >1 человек * <span class="service__spans-undertext">*массаж в четыре руки</span></span
+                                                >
+                                            </div>
+
+                                            <div
+                                                class="service__item-content-disc"
+                                            >
+                                                <p>
+                                                    Вы можете просмотреть полный
+                                                    список услуг здесь
+                                                </p>
+                                                <a href="#Price">
+                                                    <button
+                                                        id="toggleService"
+                                                        class="service__item-button"
+                                                    >
+                                                        <img
+                                                            src="./public/icons/Full.svg"
+                                                            alt=""
+                                                        />
+                                                        Полный список услуг
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a
+                                            class="service__blank-link"
+                                            target="_blank"
+                                            href="https://n1363084.yclients.com"
+                                        >
+                                            <button
+                                                class="service__item-footer"
+                                            >
+                                                Записаться
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- <div class="service__all">
+                                    <div class="service__all-wrapper">
+                                        <h5>Услуги СПА</h5>
+                                        <div class="service__all-item">
+                                            <p class="service__all-item-title">
+                                                Массажи
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>1. </span>Бабао (китайский
+                                                классический массаж)
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>2. </span>Туйна (китайский
+                                                традиционный массаж)
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>3. </span>Расслабляющий
+                                                лимфодренажный массаж лица
+                                            </p>
+                                        </div>
+                                        <div class="service__all-item">
+                                            <p class="service__all-item-title">
+                                                Кедровые бочки
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>1. </span>Медитация в
+                                                кедровой бочке с элементами
+                                                «Цигун»
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>2. </span>Терапия с
+                                                ароматическими травами
+                                            </p>
+                                        </div>
+                                        <div class="service__all-item">
+                                            <p class="service__all-item-title">
+                                                Чайная церемония
+                                            </p>
+                                        </div>
+                                        <div class="service__all-item">
+                                            <p class="service__all-item-title">
+                                                Спа-косметологические услуги
+                                                (без хирургического и
+                                                медицинского вмешательства)
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>1. </span>Уход за кожей
+                                                лица: чистка лица с
+                                                использованием паровых ванночек
+                                                и масок
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>2. </span>Увлажнение лица
+                                                с использованием масок
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>3. </span>Пилинги лица с
+                                                экстрактом зеленого чая
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>4. </span>Пилинг ног
+                                                рыбками гарра руфа
+                                            </p>
+                                        </div>
+                                        <div class="service__all-item">
+                                            <p class="service__all-item-title">
+                                                Уход за телом
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>1. </span>Обертывание
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>2. </span>Скрабирование
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>3. </span>Уважительные
+                                                процедуры, нанесение питательных
+                                                кремов или масел
+                                            </p>
+                                        </div>
+                                        <div class="service__all-item">
+                                            <p class="service__all-item-title">
+                                                БАР
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>1. </span>Кока-кола,
+                                                спрайт, фанта
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>2. </span>Соки, яблочный,
+                                                апельсин ананас
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>3. </span>Свежевыжатый
+                                                соки, морковка со сливками,
+                                                апельсиновый фреш
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>4. </span>Кофе
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>5. </span>Фруктовые
+                                                нарезки
+                                            </p>
+                                            <p class="service__all-item-disc">
+                                                <span>6. </span>Сладости к
+                                                чайной церемонии
+                                            </p>
+                                        </div>
+                                        <div
+                                            id="closeServiceMenu"
+                                            class="service__all-close"
+                                        ></div>
+                                    </div>
+                                </div> -->
                             </div>
-                            <div class="service__ready-list">
-                                <div class="service__item">
-                                    <div class="service__item-img">
-                                        <img
-                                            src="./public/img/ex-1.jpg"
-                                            alt="Наши цены"
-                                        />
-                                        <div class="service__item-subimg">
+                        </div>
+                    </div>
+                </section>
+                <section id="Gallery" class="section gallery">
+                    <div class="container gallery__container">
+                        <h2 class="all__title all__title-gallery">Галерея</h2>
+                        <div>
+                            <div class="gallery__list">
+                                <div class="gallery__slider-wrapper">
+                                    <div class="gallery__slider">
+                                        <div class="gallery__slider-item">
                                             <img
-                                                src="./public/icons/lotus-flower-svgrepo-com.svg"
-                                                alt=""
+                                                src="./public/img/gallery.jpg"
+                                                alt="Любовь к профессии"
+                                            />
+                                        </div>
+                                        <div class="gallery__slider-item">
+                                            <img
+                                                src="./public/img/gallery.jpg"
+                                                alt="Внимание к деталям"
+                                            />
+                                        </div>
+                                        <div class="gallery__slider-item">
+                                            <img
+                                                src="./public/img/gallery.jpg"
+                                                alt="Забота о клиенте"
+                                            />
+                                        </div>
+                                        <div class="gallery__slider-item">
+                                            <img
+                                                src="./public/img/gallery.jpg"
+                                                alt="Забота о клиенте"
+                                            />
+                                        </div>
+                                        <div class="gallery__slider-item">
+                                            <img
+                                                src="./public/img/gallery.jpg"
+                                                alt="Внимание к деталям"
+                                            />
+                                        </div>
+                                        <div class="gallery__slider-item">
+                                            <img
+                                                src="./public/img/gallery.jpg"
+                                                alt="Внимание к деталям"
                                             />
                                         </div>
                                     </div>
-                                    <h5>Чайный ритуал</h5>
-                                    <div class="service__item-content">
-                                        <div
-                                            class="service__item-content-point"
-                                        >
-                                            <img
-                                                src="./public/icons/Time.svg"
-                                                alt="Время процедуры"
-                                            />
-                                            <p>Время: <span>60 минут</span></p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point"
-                                        >
-                                            <img
-                                                src="./public/icons/Wallet.svg"
-                                                alt="Цена процедуры"
-                                            />
-                                            <p>
-                                                Цена: <span>5 000 &#8381;</span>
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-title"
-                                        >
-                                            <p>Программа:</p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Добро пожаловать! (10
-                                                минут)Традиционная чайная
-                                                церемония на большом подиуме с
-                                                выбором из 5 редких китайских
-                                                чаев.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>Освежающие полотенца.</p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Основной блок (30 минут): Массаж
-                                                на кушеткеВыбор из:Общий массаж
-                                                спины и шеи.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Локальный массаж проблемных зон.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Спа ритуалы (10 минут): Массаж
-                                                ступней на втором
-                                                этажеФутурологический массаж
-                                                ступней с использованием
-                                                специальных техник.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Завершение программы (10
-                                                минут):Расслабляющая медитация в
-                                                зоне отдыха.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <img
-                                                src="./public/icons/GIft.svg"
-                                                alt=""
-                                            />
-                                            <p>
-                                                Подарок: био-чай в
-                                                индивидуальной упаковке.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <button class="service__item-footer">
-                                        Записаться
-                                    </button>
-                                </div>
-                                <div class="service__item">
-                                    <div class="service__item-img">
-                                        <img
-                                            src="./public/img/ex-1.jpg"
-                                            alt="Наши цены"
-                                        />
-                                        <div class="service__item-subimg">
-                                            <img
-                                                src="./public/icons/lotus-flower-svgrepo-com.svg"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                    <h5>Бамбуковое наслаждение</h5>
-                                    <div class="service__item-content">
-                                        <div
-                                            class="service__item-content-point"
-                                        >
-                                            <img
-                                                src="./public/icons/Time.svg"
-                                                alt="Время процедуры"
-                                            />
-                                            <p>Время: <span>90 минут</span></p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point"
-                                        >
-                                            <img
-                                                src="./public/icons/Wallet.svg"
-                                                alt="Цена процедуры"
-                                            />
-                                            <p>
-                                                Цена:
-                                                <span>15 000 &#8381;</span>
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-title"
-                                        >
-                                            <p>Программа:</p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Добро пожаловать! (10
-                                                минут)Традиционная чайная
-                                                церемония на большом подиуме с
-                                                выбором из 5 редких китайских
-                                                чаев.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>Освежающие полотенца.</p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Основной блок (30 минут): Массаж
-                                                на кушеткеВыбор из:Общий массаж
-                                                спины и шеи.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Локальный массаж проблемных зон.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Спа ритуалы (10 минут): Массаж
-                                                ступней на втором
-                                                этажеФутурологический массаж
-                                                ступней с использованием
-                                                специальных техник.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Завершение программы (10
-                                                минут):Расслабляющая медитация в
-                                                зоне отдыха.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <img
-                                                src="./public/icons/GIft.svg"
-                                                alt=""
-                                            />
-                                            <p>
-                                                Подарок: био-чай в
-                                                индивидуальной упаковке.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <button class="service__item-footer">
-                                        Записаться
-                                    </button>
-                                </div>
-                                <div class="service__item">
-                                    <div class="service__item-img">
-                                        <img
-                                            src="./public/img/ex-1.jpg"
-                                            alt="Наши цены"
-                                        />
-                                        <div class="service__item-subimg">
-                                            <img
-                                                src="./public/icons/lotus-flower-svgrepo-com.svg"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                    <h5>Императорский отдых</h5>
-                                    <div class="service__item-content">
-                                        <div
-                                            class="service__item-content-point"
-                                        >
-                                            <img
-                                                src="./public/icons/Time.svg"
-                                                alt="Время процедуры"
-                                            />
-                                            <p>Время: <span>120 минут</span></p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point"
-                                        >
-                                            <img
-                                                src="./public/icons/Wallet.svg"
-                                                alt="Цена процедуры"
-                                            />
-                                            <p>
-                                                Цена:
-                                                <span>25 000 &#8381;</span>
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-title"
-                                        >
-                                            <p>Программа:</p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Добро пожаловать! (10
-                                                минут)Традиционная чайная
-                                                церемония на большом подиуме с
-                                                выбором из 5 редких китайских
-                                                чаев.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>Освежающие полотенца.</p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Основной блок (30 минут): Массаж
-                                                на кушеткеВыбор из:Общий массаж
-                                                спины и шеи.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Локальный массаж проблемных зон.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Спа ритуалы (10 минут): Массаж
-                                                ступней на втором
-                                                этажеФутурологический массаж
-                                                ступней с использованием
-                                                специальных техник.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Завершение программы (10
-                                                минут):Расслабляющая медитация в
-                                                зоне отдыха.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <img
-                                                src="./public/icons/GIft.svg"
-                                                alt=""
-                                            />
-                                            <p>
-                                                Подарок: био-чай в
-                                                индивидуальной упаковке.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <button class="service__item-footer">
-                                        Записаться
-                                    </button>
-                                </div>
-                                <div class="service__item">
-                                    <div class="service__item-img">
-                                        <img
-                                            src="./public/img/ex-1.jpg"
-                                            alt="Наши цены"
-                                        />
-                                        <div class="service__item-subimg">
-                                            <img
-                                                src="./public/icons/lotus-flower-svgrepo-com.svg"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                    <h5>Чайный ритуал</h5>
-                                    <div class="service__item-content">
-                                        <div
-                                            class="service__item-content-point"
-                                        >
-                                            <img
-                                                src="./public/icons/Time.svg"
-                                                alt="Время процедуры"
-                                            />
-                                            <p>Время: <span>60 минут</span></p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point"
-                                        >
-                                            <img
-                                                src="./public/icons/Wallet.svg"
-                                                alt="Цена процедуры"
-                                            />
-                                            <p>
-                                                Цена: <span>5 000 &#8381;</span>
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-title"
-                                        >
-                                            <p>Программа:</p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Добро пожаловать! (10
-                                                минут)Традиционная чайная
-                                                церемония на большом подиуме с
-                                                выбором из 5 редких китайских
-                                                чаев.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>Освежающие полотенца.</p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Основной блок (30 минут): Массаж
-                                                на кушеткеВыбор из:Общий массаж
-                                                спины и шеи.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Локальный массаж проблемных зон.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Спа ритуалы (10 минут): Массаж
-                                                ступней на втором
-                                                этажеФутурологический массаж
-                                                ступней с использованием
-                                                специальных техник.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Завершение программы (10
-                                                минут):Расслабляющая медитация в
-                                                зоне отдыха.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <img
-                                                src="./public/icons/GIft.svg"
-                                                alt=""
-                                            />
-                                            <p>
-                                                Подарок: био-чай в
-                                                индивидуальной упаковке.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <button class="service__item-footer">
-                                        Записаться
-                                    </button>
-                                </div>
-                                <div class="service__item">
-                                    <div class="service__item-img">
-                                        <img
-                                            src="./public/img/ex-1.jpg"
-                                            alt="Наши цены"
-                                        />
-                                        <div class="service__item-subimg">
-                                            <img
-                                                src="./public/icons/lotus-flower-svgrepo-com.svg"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                    <h5>Бамбуковое наслаждение</h5>
-                                    <div class="service__item-content">
-                                        <div
-                                            class="service__item-content-point"
-                                        >
-                                            <img
-                                                src="./public/icons/Time.svg"
-                                                alt="Время процедуры"
-                                            />
-                                            <p>Время: <span>90 минут</span></p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point"
-                                        >
-                                            <img
-                                                src="./public/icons/Wallet.svg"
-                                                alt="Цена процедуры"
-                                            />
-                                            <p>
-                                                Цена:
-                                                <span>15 000 &#8381;</span>
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-title"
-                                        >
-                                            <p>Программа:</p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Добро пожаловать! (10
-                                                минут)Традиционная чайная
-                                                церемония на большом подиуме с
-                                                выбором из 5 редких китайских
-                                                чаев.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>Освежающие полотенца.</p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Основной блок (30 минут): Массаж
-                                                на кушеткеВыбор из:Общий массаж
-                                                спины и шеи.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Локальный массаж проблемных зон.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Спа ритуалы (10 минут): Массаж
-                                                ступней на втором
-                                                этажеФутурологический массаж
-                                                ступней с использованием
-                                                специальных техник.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Завершение программы (10
-                                                минут):Расслабляющая медитация в
-                                                зоне отдыха.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <img
-                                                src="./public/icons/GIft.svg"
-                                                alt=""
-                                            />
-                                            <p>
-                                                Подарок: био-чай в
-                                                индивидуальной упаковке.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <button class="service__item-footer">
-                                        Записаться
-                                    </button>
-                                </div>
-                                <div class="service__item">
-                                    <div class="service__item-img">
-                                        <img
-                                            src="./public/img/ex-1.jpg"
-                                            alt="Наши цены"
-                                        />
-                                        <div class="service__item-subimg">
-                                            <img
-                                                src="./public/icons/lotus-flower-svgrepo-com.svg"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                    <h5>Императорский отдых</h5>
-                                    <div class="service__item-content">
-                                        <div
-                                            class="service__item-content-point"
-                                        >
-                                            <img
-                                                src="./public/icons/Time.svg"
-                                                alt="Время процедуры"
-                                            />
-                                            <p>Время: <span>120 минут</span></p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point"
-                                        >
-                                            <img
-                                                src="./public/icons/Wallet.svg"
-                                                alt="Цена процедуры"
-                                            />
-                                            <p>
-                                                Цена:
-                                                <span>25 000 &#8381;</span>
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-title"
-                                        >
-                                            <p>Программа:</p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Добро пожаловать! (10
-                                                минут)Традиционная чайная
-                                                церемония на большом подиуме с
-                                                выбором из 5 редких китайских
-                                                чаев.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>Освежающие полотенца.</p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Основной блок (30 минут): Массаж
-                                                на кушеткеВыбор из:Общий массаж
-                                                спины и шеи.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Локальный массаж проблемных зон.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Спа ритуалы (10 минут): Массаж
-                                                ступней на втором
-                                                этажеФутурологический массаж
-                                                ступней с использованием
-                                                специальных техник.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <div class="dot"></div>
-                                            <p>
-                                                Завершение программы (10
-                                                минут):Расслабляющая медитация в
-                                                зоне отдыха.
-                                            </p>
-                                        </div>
-                                        <div
-                                            class="service__item-content-point service__item-content-point-info"
-                                        >
-                                            <img
-                                                src="./public/icons/GIft.svg"
-                                                alt=""
-                                            />
-                                            <p>
-                                                Подарок: био-чай в
-                                                индивидуальной упаковке.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <button class="service__item-footer">
-                                        Записаться
-                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+                <section id="Price" class="section price">
+                    <div class="price__background">
+                        <video autoplay loop muted playsinline>
+                            <source
+                                src="./public/video/istockphoto-1774387965-640_adpp_is.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                    </div>
+                    <div class="price__background"></div>
+                    <div class="container price__container">
+                        <h2 class="all__title-alt">Полный список услуг</h2>
+                        <div class="price__list-wrapper">
+                            <div class="price__list-arrows">
+                                <div
+                                    id="priceArrowLeft"
+                                    class="price__list-arrow-wrapper"
+                                >
+                                    <img
+                                        src="./public/icons/ex-left.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="price__list-arrow-count">
+                                    <span id="priceListCurrent">1</span> /
+                                    <span id="priceListAll">2</span>
+                                </div>
+                                <div
+                                    id="priceArrowRight"
+                                    class="price__list-arrow-wrapper price__list-arrow-right"
+                                >
+                                    <img
+                                        src="./public/icons/ex-left.svg"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div class="price__list">
+                                <div class="price__item">
+                                    <div class="price__item-title">Массажи</div>
+
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>
+                                                Бабао (китайский классический
+                                                массаж)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>
+                                                Туйна (китайский традиционный
+                                                массаж)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>
+                                                Расслабляющий лимфодренажный
+                                                массаж лица
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price__item">
+                                    <div class="price__item-title">
+                                        Кедровые бочки
+                                    </div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>
+                                                Медитация в кедровой бочке с
+                                                элементами «Цигун»
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>
+                                                Терапия с ароматическими травами
+                                                Чайная церемония
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price__item">
+                                    <div class="price__item-title">
+                                        Спа-косметологические услуги *
+                                        <div class="price__item-title-ex">
+                                            без хирургического и медицинского
+                                            вмешательства
+                                        </div>
+                                    </div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>
+                                                Уход за кожей лица: чистка лица
+                                                с использованием паровых
+                                                ванночек и масок
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>
+                                                Увлажнение лица с использованием
+                                                масок
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>
+                                                Пилинги лица с экстрактом
+                                                зеленого чая
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price__item">
+                                    <div class="price__item-title">
+                                        Уход за телом
+                                    </div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>Обертывание</p>
+                                        </div>
+                                    </div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>Скрабирование</p>
+                                        </div>
+                                    </div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>
+                                                Уважительные процедуры,
+                                                нанесение питательных кремов или
+                                                масел
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>Пилинг ног рыбками гарра руфа</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price__item">
+                                    <div class="price__item-title">
+                                        Чайная церемония
+                                    </div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>
+                                                Китайско-императорская чайная
+                                                церемония с 5 видами
+                                                традиционных китайских чаев
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price__item">
+                                    <div class="price__item-title">Напитки</div>
+                                    <div class="price__item-point">
+                                        <div class="price__item-point-text">
+                                            <div
+                                                class="price__item-arrow price__item-right"
+                                            >
+                                                <img
+                                                    src="./public/icons/ex-left.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <p>
+                                                Чаи, соки и прохладительные
+                                                напитки в неограниченном
+                                                количестве
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section class="section benefits" id="Benef">
                     <div class="container benefits__container">
                         <h2 class="all__title">Преимущества</h2>
                         <p class="benefits__subtitle">
-                            Откройте для себя мир безмятежности и роскоши В
-                            <span>Soluxe Asian</span> мы создали уникальное
-                            пространство, где традиции Востока сочетаются с
-                            премиальным сервисом. Позвольте себе погрузиться в
-                            атмосферу абсолютного комфорта, доверяя заботу о
-                            себе лучшим мастерам.
+                            В <span>Soluxe Spa</span> традиции Востока
+                            встречаются с премиальным сервисом. Наши мастера
+                            создадут для вас атмосферу абсолютного комфорта и
+                            гармонии
                         </p>
                         <div class="benefits__list">
                             <div class="benefits__item">
-                                <img
+                                <!-- <img
                                     src="./public/img/benefits.jpg"
                                     alt="Индивидуальный подход"
-                                />
+                                /> -->
                                 <h5 class="benefits__item-title">
-                                    Индивидуальный подход
+                                    Уникальная концепция
                                 </h5>
                                 <p class="benefits__item-disc">
-                                    Каждая программа подбирается с учетом ваших
-                                    пожеланий и особенностей организма, чтобы
-                                    достичь максимального расслабления и пользы.
+                                    Вас ждет полное погружение в релаксацию
+                                    через 5 ключевых направлений: массаж,
+                                    кедровые бочки, чайные церемонии, спа-уход и
+                                    процедуры для тела
                                 </p>
                             </div>
                             <div class="benefits__item">
-                                <img
+                                <!-- <img
                                     src="./public/img/benefits-1.jpg"
                                     alt="Аутентичные спа-ритуалы"
-                                />
+                                /> -->
                                 <h5 class="benefits__item-title">
-                                    Аутентичные спа-ритуалы
+                                    Гибкость выбора
                                 </h5>
                                 <p class="benefits__item-disc">
-                                    Каждая программа подбирается с учетом ваших
-                                    пожеланий и особенностей организма, чтобы
-                                    достичь максимального расслабления и пользы.
+                                    Клиент выбирает услуги из 5 категорий и
+                                    создает индивидуальную программу на 60, 90
+                                    или 120 минут.
                                 </p>
                             </div>
                             <div class="benefits__item">
-                                <img
+                                <!-- <img
                                     src="./public/img/benefits-2.jpg"
                                     alt="Эксклюзивные спа-программы"
-                                />
+                                /> -->
                                 <h5 class="benefits__item-title">
-                                    Эксклюзивные спа-программы
+                                    Восточные традиции
                                 </h5>
                                 <p class="benefits__item-disc">
-                                    Каждая программа подбирается с учетом ваших
-                                    пожеланий и особенностей организма, чтобы
-                                    достичь максимального расслабления и пользы.
+                                    Наше спа воплощает принципы китайской
+                                    медицины: массаж Туйна, Бабао и медитация в
+                                    кедровой бочке с Цигун.
                                 </p>
                             </div>
                             <div class="benefits__item">
-                                <img
+                                <!-- <img
                                     src="./public/img/benefits-3.jpg"
                                     alt="Опытные мастера"
-                                />
+                                /> -->
                                 <h5 class="benefits__item-title">
-                                    Опытные мастера
+                                    Комплексное востановление
                                 </h5>
                                 <p class="benefits__item-disc">
-                                    Каждая программа подбирается с учетом ваших
-                                    пожеланий и особенностей организма, чтобы
-                                    достичь максимального расслабления и пользы.
+                                    Физический комфорт + эмоциональное
+                                    равновесие в каждой программе.
                                 </p>
                             </div>
                             <div class="benefits__item">
-                                <img
+                                <!-- <img
                                     src="./public/img/benefits-4.jpg"
                                     alt="Атмосфера уединения и гармонии"
-                                />
+                                /> -->
                                 <h5 class="benefits__item-title">
-                                    Атмосфера уединения и гармонии
+                                    Высокое качество
                                 </h5>
                                 <p class="benefits__item-disc">
-                                    Каждая программа подбирается с учетом ваших
-                                    пожеланий и особенностей организма, чтобы
-                                    достичь максимального расслабления и пользы.
+                                    Мы используем только натуральные компоненты
+                                    и профессиональное оборудование, обеспечивая
+                                    безопасность и эффективность каждой
+                                    процедуры.
                                 </p>
                             </div>
                             <div class="benefits__item">
-                                <img
+                                <!-- <img
                                     src="./public/img/benefits-5.jpg"
                                     alt="Премиальная косметика"
-                                />
-                                <h5 class="benefits__item-title">
-                                    Премиальная косметика
-                                </h5>
+                                /> -->
+                                <h5 class="benefits__item-title">Удобство</h5>
                                 <p class="benefits__item-disc">
-                                    Каждая программа подбирается с учетом ваших
-                                    пожеланий и особенностей организма, чтобы
-                                    достичь максимального расслабления и пользы.
+                                    Наши пакеты разработаны так, чтобы вы могли
+                                    максимально расслабиться, не беспокоясь о
+                                    времени — все услуги четко структурированы и
+                                    оптимизированы под выбранный временной
+                                    формат.
                                 </p>
                             </div>
                             <div class="benefits__item">
-                                <img
+                                <!-- <img
                                     src="./public/img/benefits-6.jpg"
                                     alt="Гибкое расписание и сервис"
-                                />
+                                /> -->
                                 <h5 class="benefits__item-title">
-                                    Гибкое расписание и сервис
+                                    Дополнительные приятности
                                 </h5>
                                 <p class="benefits__item-disc">
-                                    Каждая программа подбирается с учетом ваших
-                                    пожеланий и особенностей организма, чтобы
-                                    достичь максимального расслабления и пользы.
+                                    Во время или после процедур вы можете
+                                    насладиться напитками из нашего бара и
+                                    фруктовыми закусками, что делает ваш визит
+                                    еще более приятным.
                                 </p>
                             </div>
                             <div class="benefits__item">
-                                <img
+                                <!-- <img
                                     src="./public/img/benefits-7.jpg"
                                     alt="Эксклюзивные подарочные сертификаты"
-                                />
+                                /> -->
                                 <h5 class="benefits__item-title">
                                     Эксклюзивные подарочные сертификаты
                                 </h5>
@@ -999,239 +1123,203 @@
                         </div>
                     </div>
                 </section>
-                <section id="Price" class="section price">
-                    <div class="price__background"></div>
-                    <div class="container price__container">
-
-                        <h2 class="all__title-alt">Наши цены</h2>
-                        <div class="pricing__wrapper" id="tableWrapper">
-                            <table class="pricing__table">
-                                <thead>
-                                    <tr>
-                                        <th>Услуга</th>
-                                        <th>Цена</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Традиционный тайский массаж</td>
-                                        <td class="pricing__table-count">5 500 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Стоун-терапия (массаж горячими
-                                            камнями)
-                                        </td>
-                                        <td class="pricing__table-count">6 000 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ритуал «Чайная гармония»</td>
-                                        <td class="pricing__table-count">7 500 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            SPA-программа «Полное расслабление»
-                                        </td>
-                                        <td class="pricing__table-count">10 000 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гавайский массаж Lomi-Lomi</td>
-                                        <td class="pricing__table-count">6 500 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Аромамассаж с маслами</td>
-                                        <td class="pricing__table-count">5 000 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Японский массаж лица</td>
-                                        <td class="pricing__table-count">4 500 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Глубокотканный массаж</td>
-                                        <td class="pricing__table-count">6 500 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Лимфодренажный массаж</td>
-                                        <td class="pricing__table-count">5 200 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Балийский массаж</td>
-                                        <td class="pricing__table-count">6 800 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Массаж горячими травяными мешочками
-                                        </td>
-                                        <td class="pricing__table-count">7 200 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            SPA-обёртывание «Шоколадное
-                                            наслаждение»
-                                        </td>
-                                        <td class="pricing__table-count">5 900 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Детокс-программа с водорослями</td>
-                                        <td class="pricing__table-count">7 000 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Хаммам с пилингом и пенным массажем
-                                        </td>
-                                        <td class="pricing__table-count">8 500 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Традиционный банный массаж</td>
-                                        <td class="pricing__table-count">5 800 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Тайский массаж ступней</td>
-                                        <td class="pricing__table-count">4 800 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Скандинавский массаж тела</td>
-                                        <td class="pricing__table-count">6 400 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Классический массаж головы</td>
-                                        <td class="pricing__table-count">3 500 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Аюрведический массаж</td>
-                                        <td class="pricing__table-count">7 300 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Тайский массаж для двоих</td>
-                                        <td class="pricing__table-count">12 000 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Пилинг тела с натуральными скрабами
-                                        </td>
-                                        <td class="pricing__table-count">4 200 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Массаж с розовыми лепестками</td>
-                                        <td class="pricing__table-count">5 600 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Экспресс-массаж спины</td>
-                                        <td class="pricing__table-count">3 800 ₽</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Полный спа-день (6 часов)</td>
-                                        <td class="pricing__table-count">20 000 ₽</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <button class="toggle-btn" id="toggleButton">
-                                <img
-                                    src="./public/icons/arrow-down.svg"
-                                    alt=""
-                                />
-                            </button>
-                        </div>
-                    </div>
-                </section>
-                <section id="Gallery" class="section gallery">
-                    <div class="container gallery__container">
-                        <h2 class="all__title">Галерея</h2>
-                        <div class="gallery__row">
-                            <div class="gallery__row-item gallery__row-item-full">
-                                <div class="gallery__row-item-bg">
-                                    <img src="./public/img/gallery-1.png" alt="">
-                                </div>
-                                <div class="gallery__item-disc">
-                                    <p>Элитное обслуживание</p>
-                                </div>
-                            </div>
-                            <div class="gallery__col">
-                                <div class="gallery__row-item">
-                                    <div class="gallery__row-item-bg">
-                                        <img src="./public/img/gallery-2.png" alt="">
-                                    </div>
-                                    <div class="gallery__item-disc">
-                                        <p>Элитное обслуживание</p>
-                                    </div>
-                                </div>
-                                <div class="gallery__row-item">
-                                    <div class="gallery__row-item-bg">
-                                        <img src="./public/img/gallery-3.png" alt="">
-                                    </div><div class="gallery__item-disc">
-                                        <p>Элитное обслуживание</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery__row">
-                            <div class="gallery__row-item">
-                                <div class="gallery__row-item-bg">
-                                    <img src="./public/img/gallery-2.png" alt="">
-                                </div>
-                                <div class="gallery__item-disc">
-                                    <p>Элитное обслуживание</p>
-                                </div>
-                            </div>
-                            <div class="gallery__row-item">
-                                <div class="gallery__row-item-bg">
-                                    <img src="./public/img/gallery-2.png" alt="">
-                                </div>
-                                <div class="gallery__item-disc">
-                                    <p>Элитное обслуживание</p>
-                                </div>
-                            </div>
-                            <div class="gallery__row-item">
-                                <div class="gallery__row-item-bg">
-                                    <img src="./public/img/gallery-2.png" alt="">
-                                </div>
-                                <div class="gallery__item-disc">
-                                    <p>Элитное обслуживание</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery__row">
-                            <div class="gallery__col">
-                                <div class="gallery__row-item">
-                                    <div class="gallery__row-item-bg">
-                                        <img src="./public/img/gallery-2.png" alt="">
-                                    </div>
-                                    <div class="gallery__item-disc">
-                                        <p>Элитное обслуживание</p>
-                                    </div>
-                                </div>
-                                <div class="gallery__row-item">
-                                    <div class="gallery__row-item-bg">
-                                        <img src="./public/img/gallery-3.png" alt="">
-                                    </div><div class="gallery__item-disc">
-                                        <p>Элитное обслуживание</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery__row-item gallery__row-item-full">
-                                <div class="gallery__row-item-bg">
-                                    <img src="./public/img/gallery-1.png" alt="">
-                                </div>
-                                <div class="gallery__item-disc">
-                                    <p>Элитное обслуживание</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </section>
-                <section class="section reviews" id="Rev">
+                <!-- <section class="section reviews" id="Rev">
                     <div class="reviews__container container">
                         <h2 class="all__title-alt">Отзывы</h2>
-                        <div class="reviews__list">
-                            <div class="reviews__item">
-                                <div class="reviews__item-img">
-                                    <img class="reviews__item-img-bg" src="./public/img/benefits-3.jpg" alt="">
-                                    <div class="reviews__item-avatar">
-                                        <img src="./public/img/reviews-1.svg" alt="">
+                        <div>
+                            <div class="reviews__list">
+                                <div class="reviews__item">
+                                    <div class="reviews__item-img">
+                                        <img
+                                            class="reviews__item-img-bg"
+                                            src="./public/img/benefits-3.jpg"
+                                            alt=""
+                                        />
+                                        <div class="reviews__item-avatar">
+                                            <img
+                                                src="./public/img/reviews-1.svg"
+                                                alt=""
+                                            />
+                                        </div>
                                     </div>
+                                    <p class="reviews__item-name">Елена</p>
+                                    <p class="reviews__item-disc">
+                                        Потрясающее место! Атмосфера уюта и роскоши,
+                                        профессиональные мастера, а после процедур
+                                        чувствуешь себя заново рождённой.
+                                        Обязательно вернусь!
+                                    </p>
                                 </div>
-                                <p class="reviews__item-name">Елена</p>
+                                <div class="reviews__item">
+                                    <div class="reviews__item-img">
+                                        <img
+                                            class="reviews__item-img-bg"
+                                            src="./public/img/benefits-3.jpg"
+                                            alt=""
+                                        />
+                                        <div class="reviews__item-avatar">
+                                            <img
+                                                src="./public/img/reviews-1.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <p class="reviews__item-name">Ольга</p>
+                                    <p class="reviews__item-disc">
+                                        Сервис на высшем уровне! Внимательный
+                                        персонал, идеальная чистота, а массаж —
+                                        просто огонь! Спасибо за отдых и релакс
+                                    </p>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__item-img">
+                                        <img
+                                            class="reviews__item-img-bg"
+                                            src="./public/img/benefits-3.jpg"
+                                            alt=""
+                                        />
+                                        <div class="reviews__item-avatar">
+                                            <img
+                                                src="./public/img/reviews-1.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <p class="reviews__item-name">Екатерина</p>
+                                    <p class="reviews__item-disc">
+                                        Soluxe Asian — это рай для души и тела.
+                                        Каждая деталь продумана до мелочей, а
+                                        ароматы масел и расслабляющая музыка
+                                        заставляют забыть о стрессе.
+                                    </p>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__item-img">
+                                        <img
+                                            class="reviews__item-img-bg"
+                                            src="./public/img/benefits-3.jpg"
+                                            alt=""
+                                        />
+                                        <div class="reviews__item-avatar">
+                                            <img
+                                                src="./public/img/reviews-1.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <p class="reviews__item-name">Елена</p>
+                                    <p class="reviews__item-disc">
+                                        Был в разных спа-салонах, но здесь — особая
+                                        атмосфера. Настоящий восточный ритуал, после
+                                        которого тело словно заново оживает. Спасибо
+                                        мастерам!
+                                    </p>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__item-img">
+                                        <img
+                                            class="reviews__item-img-bg"
+                                            src="./public/img/benefits-3.jpg"
+                                            alt=""
+                                        />
+                                        <div class="reviews__item-avatar">
+                                            <img
+                                                src="./public/img/reviews-1.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <p class="reviews__item-name">Ольга</p>
+                                    <p class="reviews__item-disc">
+                                        Я в восторге! Настоящая перезагрузка после
+                                        тяжёлой недели. Мастера знают своё дело, всё
+                                        на высшем уровне. Теперь только сюда!
+                                    </p>
+                                </div>
+                                <div class="reviews__item">
+                                    <div class="reviews__item-img">
+                                        <img
+                                            class="reviews__item-img-bg"
+                                            src="./public/img/benefits-3.jpg"
+                                            alt=""
+                                        />
+                                        <div class="reviews__item-avatar">
+                                            <img
+                                                src="./public/img/reviews-1.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <p class="reviews__item-name">Елена</p>
+                                    <p class="reviews__item-disc">
+                                        Потрясающее место! Атмосфера уюта и роскоши,
+                                        профессиональные мастера, а после процедур
+                                        чувствуешь себя заново рождённой.
+                                        Обязательно вернусь!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+                <section class="contact section" id="Cont">
+                    <div class="contact__container container">
+                        <h2 class="all__title">Контакты</h2>
+                        <div class="contact__list">
+                            <div class="contact__map">
+                                <div class="contact__map">
+                                    <iframe
+                                        id="map_86081028"
+                                        frameborder="0"
+                                        width="100%"
+                                        height="550px"
+                                        sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+                                    ></iframe>
+                                    <script type="text/javascript">
+                                        (function (e, t) {
+                                            var r = document.getElementById(e);
+                                            r.contentWindow.document.open(),
+                                                r.contentWindow.document.write(
+                                                    atob(t)
+                                                ),
+                                                r.contentWindow.document.close();
+                                        })(
+                                            "map_86081028",
+                                            "PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUpe3ZhciB0PUpTT04ucGFyc2UoZSkscj10Lm9yZGVyZWRHZW9tZXRyaWVzLG49dC5tYXBQb3NpdGlvbixhPXQuaXNXaGVlbFpvb21FbmFibGVkO2Z1bmN0aW9uIG8oZSl7cmV0dXJuIGRlY29kZVVSSUNvbXBvbmVudChhdG9iKGUpLnNwbGl0KCIiKS5tYXAoZnVuY3Rpb24oZSl7cmV0dXJuIiUiKygiMDAiK2UuY2hhckNvZGVBdCgwKS50b1N0cmluZygxNikpLnNsaWNlKC0yKX0pLmpvaW4oIiIpKX1ERy50aGVuKGZ1bmN0aW9uKCl7dmFyIGU9REcubWFwKCJtYXAiLHtjZW50ZXI6W24ubGF0LG4ubG9uXSx6b29tOm4uem9vbSxzY3JvbGxXaGVlbFpvb206YSx6b29tQ29udHJvbDohYX0pO0RHLmdlb0pTT04ocix7c3R5bGU6ZnVuY3Rpb24oZSl7dmFyIHQscixuLGEsbztyZXR1cm57ZmlsbENvbG9yOm51bGw9PT0odD1lKXx8dm9pZCAwPT09dD92b2lkIDA6dC5wcm9wZXJ0aWVzLmZpbGxDb2xvcixmaWxsT3BhY2l0eTpudWxsPT09KHI9ZSl8fHZvaWQgMD09PXI/dm9pZCAwOnIucHJvcGVydGllcy5maWxsT3BhY2l0eSxjb2xvcjpudWxsPT09KG49ZSl8fHZvaWQgMD09PW4/dm9pZCAwOm4ucHJvcGVydGllcy5zdHJva2VDb2xvcix3ZWlnaHQ6bnVsbD09PShhPWUpfHx2b2lkIDA9PT1hP3ZvaWQgMDphLnByb3BlcnRpZXMuc3Ryb2tlV2lkdGgsb3BhY2l0eTpudWxsPT09KG89ZSl8fHZvaWQgMD09PW8/dm9pZCAwOm8ucHJvcGVydGllcy5zdHJva2VPcGFjaXR5fX0scG9pbnRUb0xheWVyOmZ1bmN0aW9uKGUsdCl7cmV0dXJuInJhZGl1cyJpbiBlLnByb3BlcnRpZXM/REcuY2lyY2xlKHQsZS5wcm9wZXJ0aWVzLnJhZGl1cyk6REcubWFya2VyKHQse2ljb246ZnVuY3Rpb24oZSl7cmV0dXJuIERHLmRpdkljb24oe2h0bWw6IjxkaXYgY2xhc3M9J2J1bGxldC1tYXJrZXInIHN0eWxlPSdib3JkZXItY29sb3I6ICIrZSsiOyc+PC9kaXY+IixjbGFzc05hbWU6Im92ZXJyaWRlLWRlZmF1bHQiLGljb25TaXplOlsyMCwyMF0saWNvbkFuY2hvcjpbMTAsMTBdfSl9KGUucHJvcGVydGllcy5jb2xvcil9KX0sb25FYWNoRmVhdHVyZTpmdW5jdGlvbihlLHQpe2UucHJvcGVydGllcy5kZXNjcmlwdGlvbiYmdC5iaW5kUG9wdXAobyhlLnByb3BlcnRpZXMuZGVzY3JpcHRpb24pLHtjbG9zZUJ1dHRvbjohMCxjbG9zZU9uRXNjYXBlS2V5OiEwfSksZS5wcm9wZXJ0aWVzLnRpdGxlJiZ0LmJpbmRUb29sdGlwKG8oZS5wcm9wZXJ0aWVzLnRpdGxlKSx7cGVybWFuZW50OiEwLG9wYWNpdHk6MSxjbGFzc05hbWU6InBlcm1hbmVudC10b29sdGlwIn0pfX0pLmFkZFRvKGUpfSl9KSgneyJvcmRlcmVkR2VvbWV0cmllcyI6W3sidHlwZSI6IkZlYXR1cmUiLCJwcm9wZXJ0aWVzIjp7ImNvbG9yIjoiI2Q0MWYxZiIsInRpdGxlIjoiVTI5c2RYaGxJRk53WVE9PSIsImRlc2NyaXB0aW9uIjoiUEhBKzBLSFJndEdEMExUUXVOR1BJRGMwUEM5d1BnPT0iLCJ6SW5kZXgiOjEwMDAwMDAwMDB9LCJnZW9tZXRyeSI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6WzU2LjAwNDQzNSw1NC43MTYwMDVdfSwiaWQiOjc5Nn1dLCJtYXBQb3NpdGlvbiI6eyJsYXQiOjU0LjcxNTczNDE5MDYwNzE4NiwibG9uIjo1Ni4wMDQyMTg0NTkxMjkzNCwiem9vbSI6MTh9LCJpc1doZWVsWm9vbUVuYWJsZWQiOnRydWV9Jyk8L3NjcmlwdD48c2NyaXB0IGFzeW5jPSIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbS9ndGFnL2pzP2lkPVVBLTE1ODg2NjE2OC0xIj48L3NjcmlwdD48c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+KGZ1bmN0aW9uKGUpe2Z1bmN0aW9uIHQoKXtkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpfXdpbmRvdy5kYXRhTGF5ZXI9d2luZG93LmRhdGFMYXllcnx8W10sdCgianMiLG5ldyBEYXRlKSx0KCJjb25maWciLGUpLHdpbmRvdy5ndGFnPXR9KSgnVUEtMTU4ODY2MTY4LTEnKTwvc2NyaXB0PjwvYm9keT4="
+                                        );
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="contact__block">
+                                <h5>Мы на связи</h5>
+                                <div class="contact__block-item">
+                                    <img
+                                        src="./public/icons/call.svg"
+                                        alt="Позвоните"
+                                    />
+                                    <a href="tel:+89991326888">
+                                        <p>+7(999)132-68-88</p>
+                                    </a>
+                                </div>
+                                <div class="contact__block-item">
+                                    <img
+                                        src="./public/icons/whatsapp-red.svg"
+                                        alt="Напишите"
+                                    />
+                                    <a href="">
+                                        <p>Написать нам в whatsapp</p>
+                                    </a>
+                                </div>
+                                <div class="contact__block-item">
+                                    <img
+                                        src="./public/icons/geo-contact.svg"
+                                        alt="Местоположение"
+                                    />
+                                    <p>
+                                        г. Уфа, ул. Менделеева 132, <br />
+                                        студия 74
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1239,14 +1327,91 @@
                 <br /><br /><br /><br /><br /><br /><br /><br />
             </div>
         </main>
+        <footer class="footer">
+            <div class="conatiner footer__container">
+                <div class="footer__disc">
+                    <div class="footer__disc-info">
+                        <p>soluxespa@mail.ru</p>
+                        <p>+7(999)132-68-88</p>
+                    </div>
+                    <p>© Soluxe Spa, 2025</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__link-social">
+                        <a href="https://t.me/soluxespa">
+                            <div class="footer__link-social-item">
+                                <img
+                                    src="./public/icons/tg-r.svg"
+                                    alt="Instagram"
+                                />
+                                <p></p>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/79991326888">
+                            <div class="footer__link-social-item">
+                                <img
+                                    src="./public/icons/whatsapp-red.svg"
+                                    alt="WHAATSAPP"
+                                />
+                                <p></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="footer__link-logo">
+                        <img src="./logo.svg" alt="" />
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script
+            type="text/javascript"
+            src="https://w1363084.yclients.com/widgetJS"
+            charset="UTF-8"
+        ></script>
+
         <!-- LIBS -->
+
+        <style>
+            .yButton.right {
+                right: 0px !important;
+                top: 50% !important;
+                height: 180px !important;
+                width: 30px !important;
+            }
+
+            .yButtonBackground {
+                width: 100% !important;
+                height: 100% !important;
+                border-radius: 15px 0px 0px 15px !important;
+            }
+
+            .yButtonWave {
+                display: none;
+            }
+
+            .yButtonText {
+                writing-mode: vertical-rl; /* Текст вертикально, сверху вниз (справа налево) */
+                text-orientation: mixed; /* Чтобы буквы не были перевёрнуты */
+                transform: rotate(180deg) translateY(-150%); /* Если надо наоборот снизу вверх */
+                white-space: nowrap; /* Чтобы текст не переносился */
+            }
+        </style>
+
         <script src="./assets/js/libs/jquery-3.6.3.min.js"></script>
         <script src="/assets/js/libs/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
         <!-- SCRIPT -->
         <script src="./assets/js/header.js"></script>
-        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/animation.js"></script>
         <script src="./assets/js/service.js"></script>
         <script src="./assets/js/price.js"></script>
+        <script src="./assets/js/reviews.js"></script>
+        <script src="./assets/js/gallery.js"></script>
+        <script src="./assets/js/nav.js"></script>
+        <script src="./assets/js/vij.js"></script>
+        <script src="./assets/js/script.js"></script>
     </body>
 </html>

@@ -1,46 +1,40 @@
-document.addEventListener("DOMContentLoaded", () => {
-    let tl = gsap.timeline();
+document.addEventListener("DOMContentLoaded", function () {
+    const switches = document.querySelectorAll(".service__item-switch input");
 
-    tl.set(".welcome__title", { opacity: 0 }) // Текст скрыт в начале
+    switches.forEach((switchInput) => {
+        const parentItem = switchInput.closest(".service__item");
+        const priceSpan = parentItem.querySelector(
+            ".service__item-content-point-price p span"
+        );
+        const underText = parentItem.querySelector(".service__spans-undertext");
 
-    .to(".title-mask", { 
-        duration: 0.2, 
-        opacity: 1,
-        x: "-100%",
-        ease: "power2.out" 
-    }) // Прямоугольник появляется
+        if (!priceSpan || !underText) return; // Проверяем, есть ли элементы
 
-    .to(".title-mask", { 
-        opacity: 1, // Прозрачность уходит в 0
-        duration: 0.3, 
-        x: "0%",
-        ease: "power2.in"
-    }, "+=0.2") // Ждём 0.2s перед исчезновением
+        const priceForTwo = parseInt(priceSpan.textContent.replace(/\D/g, ""));
+        const priceForOne = priceForTwo - 4000; // Логика вычета цены
 
-    .to(".title-mask" , {
-        opacity: 0,
-        duration: 0.5,
-        x: "0%",
-        ease: "power2.in"
-    }, "+=0.1")
+        // Проверяем при загрузке страницы
+        if (switchInput.checked) {
+            priceSpan.innerHTML = `${priceForOne} &#8381;`;
+            underText.classList.add("active");
+        }
 
-    .to(".welcome__title", { 
-        opacity: 1, 
-        duration: 0.2, 
-        ease: "power2.in"
-    }, "-=0.2") // Текст проявляется одновременно с исчезновением маски
-
-    .to(".welcome__disc", {
-        opacity: 1,
-        y: "0%",
-        duration: 0.3,
-        ease: "power2.out"
-    })
-
-    .to(".welcome__button" , { 
-        opacity: 1,
-        y: "0%",
-        duration: 0.2,
-        ease: "power2.out"
+        switchInput.addEventListener("change", function () {
+            if (switchInput.checked) {
+                priceSpan.innerHTML = `${priceForOne} &#8381;`;
+                underText.classList.add("active");
+            } else {
+                priceSpan.innerHTML = `${priceForTwo} &#8381;`;
+                underText.classList.remove("active");
+            }
+        });
     });
+
+    function setVH() {
+        let vh = window.innerHeight * 1.00; // Получаем 1% от высоты экрана
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+    }
+    
+    window.addEventListener("resize", setVH);
+    window.addEventListener("load", setVH);
 });
